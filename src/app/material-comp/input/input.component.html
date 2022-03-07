@@ -1,0 +1,91 @@
+<div>
+    <!--
+        floatLabel value never, auto, always
+        auto is default
+    -->
+    <mat-form-field floatLabel="never" appearance="legacy" hideRequiredMarker>
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Min 5 character</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="never" appearance="standard" hideRequiredMarker>
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Min 5 character</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field floatLabel="never" appearance="fill" color="accent" hideRequiredMarker>
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Min 5 character</mat-hint>
+    </mat-form-field>
+    
+    <mat-form-field floatLabel="never" appearance="outline" color="warn" hideRequiredMarker>
+        <mat-label>Name</mat-label>
+        <input matInput required>
+        <mat-hint align="end">Min 5 character</mat-hint>
+    </mat-form-field>
+</div>
+
+<div>
+    <!--
+        floatLabel="never" hides the label
+    -->
+    <mat-form-field>
+        <mat-label>
+            Topic
+        </mat-label>
+        <mat-select [(value)]="selectedValue" multiple>
+            <mat-option>
+                None
+            </mat-option>
+            <mat-optgroup label="Web">
+                <mat-option value="angular">Angular</mat-option>
+                <mat-option value="react">React</mat-option>
+                <mat-option value="vue">Vue</mat-option>
+            </mat-optgroup>
+            <mat-optgroup label="Mobile">
+                <mat-option value="ionic">Ionic</mat-option>
+                <mat-option value="reactNative">ReactNative</mat-option>
+            </mat-optgroup>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+{{selectedValue}}
+
+<div>
+    <mat-checkbox>
+        Subscribe
+    </mat-checkbox>
+</div>
+<div>
+    <mat-checkbox labelPosition="before">
+        Subscribe
+    </mat-checkbox>
+</div>
+<div>
+    <mat-checkbox color="primary">
+        Subscribe
+    </mat-checkbox>
+</div>
+<div>
+    <mat-checkbox color="warn">
+        Subscribe
+    </mat-checkbox>
+</div>
+
+<div>
+    <mat-radio-group>
+        <mat-radio-button color="primary" value="angular">
+            Angular
+        </mat-radio-button>
+        <mat-radio-button value="react">
+            React
+        </mat-radio-button>
+        <mat-radio-button value="vue">
+            Vue
+        </mat-radio-button>
+    </mat-radio-group>
+</div>

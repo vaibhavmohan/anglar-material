@@ -1,0 +1,21 @@
+<mat-sidenav-container>
+    <!--
+        three possible modes are push over and side
+    -->
+    <mat-sidenav mode="side" #sidebar (opened)="log('opened')" (closed)="log('closed')" [(opened)]="opened">Sidenav</mat-sidenav>
+    <mat-sidenav-content>
+        Main
+        <button (click)="opened=!opened" >
+            Toggle button
+        </button>
+        <button (click)="sidebar.open()" >
+            Open
+        </button>
+        <button (click)="sidebar.close()" >
+            Close
+        </button>
+        <button (click)="sidebar.toggle()" >
+            Toggle
+        </button>
+    </mat-sidenav-content>
+</mat-sidenav-container>
