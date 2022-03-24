@@ -32,6 +32,12 @@ export class CruddialogComponent implements OnInit {
       this.productForm.patchValue(this.editData);
       this.actionBtn = 'Update';
     }
+    this.productForm.valueChanges.subscribe(value => {
+      console.log(value);
+      console.log("Form Status",this.productForm.status);
+      console.log("this.productForm",this.productForm);
+      
+    })
   }
 
   addProduct(){
